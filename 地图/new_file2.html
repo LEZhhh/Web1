@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>风雅梦华游</title>
+		<style type="text/css">
+		body>* {				
+			margin:0;		
+            width: 1280px;
+            height: 768px;    
+		}
+		#img{
+			text-align: center;
+			margin:0 auto;		
+			padding: 0;
+			position: relative;
+            background-image:url("dt.jpg");	
+			
+		}
+		#wzimg{
+			transition:all 5s ease;
+			opacity: 1;
+			position: absolute;
+			z-index: 2;
+		}
+		#jgimg{
+			position: absolute;
+			top: 180px;
+			left: 70px;
+		}
+		#climg{
+			position: absolute;
+			top: 140px;
+			right: 350px;
+		}
+		#zdimg{
+			position: absolute;
+			top: 350px;
+			right: 80px;
+		}
+		#cltbimg{
+			position: absolute;
+			top: 140px;
+			right: 310px;
+		}
+		#zdtbimg{
+			position: absolute;
+			left: 690px;
+			top: 390px;
+		}
+		#jgtbimg{
+			position: absolute;
+			top: 190px;
+			left: 360px;
+		}
+		#yytbimg{
+			position: absolute;
+			right: 10px;
+		}
+		#yy{
+		}
+	</style>
+	<script type="text/javascript">
+	  document.addEventListener("click",function(){
+	    	document.getElementById("yy").play();
+	    })
+      function show(){
+        document.getElementById("wzimg").style.opacity="0";
+        document.getElementById("wzimg").style.zIndex="0";
+      }
+      function onjg(){
+      	document.getElementById("jgimg").style.transform="scale(1.1)";
+      }
+      function outjg(){
+      	document.getElementById("jgimg").style.transform="scale(1)";
+      }
+      function onzd(){
+      	document.getElementById("zdimg").style.transform="scale(1.1)";
+      }
+      function outzd(){
+      	document.getElementById("zdimg").style.transform="scale(1)";
+      }
+      function playPause() {    
+         var music = document.getElementById("yy");    
+         var music_btn = document.getElementById('yytbimg');    
+         if (music.paused){    
+             music.play();      
+         }    
+         else{    
+             music.pause();                   
+         }    
+     }   
+    </script>
+	</head>
+	<body onload="show()">
+	    <audio id="yy" autoplay="autoplay" preload="auto" src="bjyy .mp3" loop="loop"></audio>
+ 	    <div id="img">
+		    <div id="wzimg"><img src="wz.jpg"></div>
+		    <div id="climg"><img src="clwjs.png" ></div>
+		    <div id="jgimg"><a href="https://lezhhh.github.io/Web1/食物/new_file" target="_self"><img src="jg.png" onmouseover="onjg()" onmouseout="outjg()"/></a></div>
+		    <div id="zdimg"><a href="https://lezhhh.github.io/Web1/食物/new_file" target="_self"><img src="zd.png" onmouseover="onzd()" onmouseout="outzd()"/></a></div>
+		    <div id="cltbimg"><img src="cltb.png"></div>
+		    <div id="zdtbimg"><img src="zdtb.png"></div>
+		    <div id="jgtbimg"><img src="jgtb.png"></div>
+		    <a href="javascript:playPause();"><img src="yytb.png" id="yytbimg" ></a>
+	    </div>
+	</body>
+</html>
