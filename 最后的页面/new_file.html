@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>风雅梦华游</title>
+		<style type="text/css">
+		body>* {				
+			margin:0;		
+            width: 1280px;
+            height: 768px;            
+		}
+		#img{
+			text-align: center;
+			margin:0 auto;		
+			padding: 0;
+			position: relative;
+            background-image:url("bj.jpg");	
+            filter: brightness(70%);
+		}
+		#fxtb{
+			position: absolute;
+			top:5px ;
+			left:1280px ;
+		}
+		#jyjz{
+			position: absolute;
+			top:80px ;
+			left: 175px;
+		}
+		#ljgd{
+			position: absolute;
+			top:10px ;
+			left:1280px ;
+		}
+		#smgz{
+			position: absolute;
+			top:5px ;
+			left:130px ;
+		}
+		</style>
+		<script type="text/javascript">
+			document.addEventListener("click",function(){
+	    	document.getElementById("yy").play();
+	    })
+			function onsmgz(){
+				document.getElementById("smgz").style.width="200px";
+				document.getElementById("smgz").style.height="200px";
+			}
+			function playPause() {    
+         var music = document.getElementById("yy");    
+         var music_btn = document.getElementById('yytbimg');    
+         if (music.paused){    
+             music.play();      
+         }    
+         else{    
+             music.pause();                   
+         }    
+     }
+		</script>
+	</head>
+	<body>
+		<audio id="yy" autoplay="autoplay" preload="auto" src="bjyy .mp3" loop="loop"></audio>
+		<div id="img">	
+		</div>
+		<div id="jyjz"><img src="jyjz.png"></div>
+		
+		<div id="ljgd"><a href="http://songxh.org.cn/?kec_28/" target="_self"><img src="ljgd.png"></div>
+		<div id="smgz"><img src="smgz.png" onmouseover="onsmgz()"></div>
+	</body>
+</html>
